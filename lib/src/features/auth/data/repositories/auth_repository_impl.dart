@@ -1,4 +1,12 @@
 import 'package:fpdart/fpdart.dart';
+import 'package:smart_city/src/core/common/entities/user.dart';
+import 'package:smart_city/src/core/constants/constants.dart';
+import 'package:smart_city/src/core/error/exceptions.dart';
+import 'package:smart_city/src/core/error/failures.dart';
+import 'package:smart_city/src/core/network/connection_checker.dart';
+import 'package:smart_city/src/features/auth/data/datasources/auth_remote_data_source.dart';
+import 'package:smart_city/src/features/auth/data/models/user_model.dart';
+import 'package:smart_city/src/features/auth/domain/repository/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final AuthRemoteDataSource authRemoteDataSource;

@@ -1,5 +1,5 @@
-import 'package:blog_app/core/theme/app_pallete.dart';
 import 'package:flutter/material.dart';
+import 'package:smart_city/src/core/theme/app_pallete.dart';
 
 class AuthGradientButton extends StatelessWidget {
   final String buttonText;

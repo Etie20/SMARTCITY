@@ -1,4 +1,8 @@
 import 'package:fpdart/fpdart.dart';
+import 'package:smart_city/src/core/common/entities/user.dart';
+import 'package:smart_city/src/core/error/failures.dart';
+import 'package:smart_city/src/core/usecase/usecase.dart';
+import 'package:smart_city/src/features/auth/domain/repository/auth_repository.dart';
 
 class UserLogin implements UseCase<User, UserLoginParams> {
   final AuthRepository authRepository;

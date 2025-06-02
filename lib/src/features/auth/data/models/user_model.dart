@@ -1,3 +1,5 @@
+import 'package:smart_city/src/core/common/entities/user.dart';
+
 class UserModel extends User {
   UserModel({required super.id, required super.name, required super.email});
 
