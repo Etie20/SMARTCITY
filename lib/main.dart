@@ -4,6 +4,7 @@ import 'package:smart_city/src/core/common/cubits/cubit/app_user_cubit.dart';
 import 'package:smart_city/src/core/theme/theme.dart';
 import 'package:smart_city/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:smart_city/src/features/auth/presentation/pages/login_page.dart';
+import 'package:smart_city/src/features/reporting/presentation/bloc/report_bloc.dart';
 import 'package:smart_city/src/features/reporting/presentation/pages/report_page.dart';
 import 'package:smart_city/src/injection_container.dart';
 
@@ -19,6 +20,9 @@ void main() async {
       ),
       BlocProvider(
         create: (_) => serviceLocator<AuthBloc>(),
+      ),
+      BlocProvider(
+        create: (_) => serviceLocator<ReportBloc>(),
       ),
     ],
     child: const MyApp(),

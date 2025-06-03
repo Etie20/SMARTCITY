@@ -18,6 +18,7 @@ class ReportModel extends Report {
       statusId: json['status_id'],
       userId: json['user_id'],
       categoryId: json['category_id'],
+      image: json['image']
     );
   }
 
@@ -29,6 +30,7 @@ class ReportModel extends Report {
       'status_id': statusId,
       'user_id': userId,
       'category_id': categoryId,
+      'image': image
     };
   }
 

@@ -7,6 +7,7 @@ import 'package:smart_city/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:smart_city/src/features/auth/presentation/pages/sign_up_page.dart';
 import 'package:smart_city/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:smart_city/src/features/auth/presentation/widgets/auth_gradient_button.dart';
+import 'package:smart_city/src/features/reporting/presentation/pages/report_page.dart';
 
 class LoginPage extends StatefulWidget {
   static route() => MaterialPageRoute(builder: (context) => const LoginPage());
@@ -38,8 +39,8 @@ class _LoginPageState extends State<LoginPage> {
             if (state is AuthFailure) {
               showSnackBar(context, state.message);
             } else if (state is AuthSuccess) {
-              // Navigator.pushAndRemoveUntil(
-              //     context, BlogPage.route(), (route) => false);
+              Navigator.pushAndRemoveUntil(
+                  context, ReportPage.route(), (route) => false);
             }
           },
           builder: (context, state) {

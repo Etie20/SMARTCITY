@@ -6,7 +6,7 @@ abstract interface class ReportRemoteDataSource {
   Future<ReportModel> createReport(ReportModel model);
   Future<String> uploadReportImage({
     required File image,
-    required ReportModel model,
+    required String reportId,
   });
   Future<List<ReportModel>> getAllReports();
 }

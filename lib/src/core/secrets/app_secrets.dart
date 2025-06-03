@@ -4,4 +4,6 @@ class AppSecrets {
   static final supabaseUrl = dotenv.env['SUPABASE_URL'];
  
   static final supabaseKey =  dotenv.env['SUPABASE_API_KEY'];
+
+  static final supabaseRedirectUrl = dotenv.env['SUPABASE_REDIRECT_URL'];
 }

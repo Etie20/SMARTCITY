@@ -1,3 +1,4 @@
+import 'package:smart_city/src/core/constants/path_constants.dart';
 import 'package:smart_city/src/core/error/exceptions.dart';
 import 'package:smart_city/src/features/auth/data/models/user_model.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -79,9 +80,9 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     try {
       if (currentUserSession != null) {
         final userData = await supabaseClient
-            .from('profiles')
+            .from(PathConstants.user)
             .select()
-            .eq('id', currentUserSession!.user.id);
+            .eq('user_id', currentUserSession!.user.id);
         return UserModel.fromJson(userData.first)
             .copyWith(email: currentUserSession!.user.email);
       }
